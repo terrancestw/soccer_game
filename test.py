@@ -62,7 +62,29 @@ goalLeft = cropSurface(goalLeftWidth/2+adjust,
                        goalLeftWidth/2-adjust,
                        goalLeftHeight/2-adjust,
                        goalLeft)
-screen.blit(goalLeft,(0,0))
+#screen.blit(goalLeft,(0,0))
+
+goalMiddle = pygame.image.load("goalMiddle.png").convert_alpha()
+goalMiddle = pygame.transform.scale(goalMiddle,(250,270))
+goalMiddleWidth = goalMiddle.get_rect().width
+goalMiddleHeight = goalMiddle.get_rect().height
+goalMiddle = cropSurface(goalMiddleWidth,
+                         goalMiddleHeight/2+adjust,
+                         0,
+                         goalMiddleHeight/2-adjust,
+                         goalMiddle)
+#screen.blit(goalMiddle,(0,0))
+
+goalRight = pygame.image.load("goalRight.png").convert_alpha()
+goalRight = pygame.transform.scale(goalRight,(250,270))
+goalRightWidth = goalRight.get_rect().width
+goalRightHeight = goalRight.get_rect().height
+goalRight = cropSurface(goalRightWidth/2+adjust,
+                        goalRightHeight/2+adjust,
+                        0,
+                        goalRightHeight/2-adjust,
+                        goalRight)
+screen.blit(goalRight,(0,0))
 
 
 
